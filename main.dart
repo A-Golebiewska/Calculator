@@ -74,6 +74,10 @@ String _result = '';
       res = pow(num1, num2) as double?;
       _resulttext = 'Wynik to $res';
       break;
+    case 'C':
+      _controller1.clear();
+      _controller2.clear();
+      _resulttext = '';
     default:
       res = 0;
       _resulttext = 'Wynik to $res';
@@ -106,7 +110,7 @@ String _result = '';
            SizedBox(height: 20),
            Wrap(
              spacing: 25,
-             children: ['+', '-', '*', '/', '%','^'].map((op) {
+             children: ['+', '-', '*', '/', '%','^', 'C'].map((op) {
                return ElevatedButton(
                    onPressed: () => _calculate(op),
                  style: ElevatedButton.styleFrom(
