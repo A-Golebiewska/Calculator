@@ -68,7 +68,7 @@ String _result = '';
       break;
     case '%':
       res = (num1 *num2)/100;
-      _resulttext = 'Wynik to $res%';
+     _resulttext = '$res jest $num1% liczby $num2.';
       break;
     case '^':
       res = pow(num1, num2) as double?;
